@@ -13,5 +13,4 @@ class Appointment
     @doctor = doctor
     @@all << self
   end
-  
 end
