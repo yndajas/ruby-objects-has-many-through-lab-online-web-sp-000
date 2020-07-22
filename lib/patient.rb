@@ -23,5 +23,4 @@ class Patient
   def doctors
     appointments.collect {|appointment|appointment.doctor}.uniq
   end
-  
 end
