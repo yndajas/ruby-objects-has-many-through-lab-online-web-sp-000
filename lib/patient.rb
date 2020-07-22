@@ -18,5 +18,13 @@ class Patient
     appointment.patient = self
     appointment.doctor = doctor
   end
+
+  def appointments
+    Appointment.all.select {|appointment|appointment.patient == self}
+  end
+  
+  def doctors
+    appointments.collect {|appointment|appointment.doctor}.uniq
+  end
   
 end
